@@ -18,10 +18,18 @@ function App() {
 
   return (
     <AnimatePresence initial={false}>
+    <div className="relative" id="home">
+          <Spline scene="https://prod.spline.design/3UpSmfbyTDvsVf5t/scene.splinecode" />
+          <div className="absolute bottom-10 w-full justify-center items-center flex">
+            <div className="shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl">
+              <p className="text-textBase">Press and drag to orbit</p>
+            </div>
+          </div>
+      </div>
     <div className="flex w-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">  
       {/* Navigation Bar */}
-      <nav className="flex w-screen h-screen min-h-screen flex-col items-center justify-center relative bg-primary pb-20">
-        <div className="w-full px-6 z-50 fixed inset-x-0 top-2 flex justify-center items-center">
+      <nav className="w-full px-6 z-50 fixed inset-x-0 top-2 flex justify-center items-center">
+        <div className="w-full md:w-880 bg-navBar p-4 rounded-2xl flex items-center">
           <p className="text-lg text-slate-200 font-medium">Dominique Dante Paige</p>
 
           <div className="hidden md:flex items-center gap-6 ml-6 flex-1">
@@ -54,7 +62,7 @@ function App() {
             </a>
 
             <a 
-              href="#" 
+              href="https://www.youtube.com" 
               className="ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out"
             >
               Download
@@ -124,15 +132,6 @@ function App() {
           )}
         </div>
       </nav>
-      
-      <div className="relative" id="home">
-          <Spline scene="https://draft.spline.design/JIBfK34pLGUlr1Gq/scene.splinecode" />
-          <div className="absolute bottom-10 w-full justify-center items-center flex">
-            <div className="shadow-md p-4 flex items-center justify-center bg-zinc-900 rounded-3xl">
-              <p className="text-textBase">Press and drag to orbit</p>
-            </div>
-          </div>
-      </div>
 
       {/* Main sections */}
 
@@ -144,11 +143,12 @@ function App() {
         >
           {/* image box */}
           <div className="w-full h-420 flex items-center justify-center">
-            <div className="w-275 h-340 bg-emerald-200 rounded-md">
-              <img 
-              className="w-full h-full absolute -right-4 top-4 object-cover rounded-lg drop-shadow-lg"
-              src={Paige} 
-              alt="" 
+            <div className="w-275 h-340 bg-emerald-200 rounded-md relative">
+              <img
+                className="w-full h-full absolute -right-4 top-4 object-cover
+                rounded-lg drop-shadow-2xl"
+                src={Paige}
+                alt=""
               />
             </div>
           </div>
@@ -168,13 +168,13 @@ function App() {
 
             <motion.button 
             whileTap={{ scale: 0.8 }}
-            class="w-full md:w-auto relative mt-6 inline-flex items-center 
+            className="w-full md:w-auto relative mt-6 inline-flex items-center 
             justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900
             rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400
             group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:ring-green-200
             dark:focus:ring-green-800 hover:shadow-lg hover:shadow-teal-500/50 hover:dark:shadow-lg
             hover:dark:shadow-teal-800/80">
-              <span class="w-full md:w-auto relative px-5 py-2.5 transition-all
+              <span className="w-full md:w-auto relative px-5 py-2.5 transition-all
               ease-in duration-75 bg-white dark:bg-gray-900 rounded-md
               group-hover:bg-opacity-0">
                 Download
@@ -217,7 +217,7 @@ function App() {
         <section className="flex flex-wrap items-center justify-evenly my-24 gap-4" id="projects">
           {Projects && Projects.map(n => (
             <div key={n.id} 
-            className="border border-zinc-800 rounded-md p-2 min-w-[275px]md:max-w-[275px]
+            className="border border-zinc-800 rounded-md p-2 min-w-[245px]md:max-w-[245px]
             hover:border-zinc-600 duration-100 ease-in-out">
               <p className="text-lg text-textBase font-medium uppercase">
                 {n.name.Length > 25 ? `${n.name.slice(0, 25)}...` : n.name}
@@ -253,7 +253,7 @@ function App() {
         <section className="flex flex-wrap items-center justify-evenly my-24 gap-4" id="projects">
           {RobloxProjects && RobloxProjects.map(n => (
             <div key={n.id} 
-            className="border border-zinc-800 rounded-md p-2 min-w-[275px]md:max-w-[275px]
+            className="border border-zinc-800 rounded-md p-2 min-w-[245px]md:max-w-[245px]
             hover:border-zinc-600 duration-100 ease-in-out">
               <p className="text-lg text-textBase font-medium uppercase">
                 {n.name.Length > 25 ? `${n.name.slice(0, 25)}...` : n.name}
