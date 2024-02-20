@@ -1,4 +1,4 @@
-import { Spline } from "@splinetool/react-spline";
+import Spline from "@splinetool/react-spline";
 import { useState } from "react";
 import { IoMenu, IoLogoGithub } from 'react-icons/io5';
 

@@ -3,7 +3,7 @@ import img1 from "./images/SuperHexagon.png"
 import img2 from "./images/Cyber-Fu.png"
 import img3 from "./images/maxtran.png"
 import img4 from "./images/Asteriods.png"
-import img5 from "./images/"
+//import img5 from "./images/"
 import img6 from "./images/chevy-a06dc76b.png"
 import img7 from "./images/OIG-_1_.jpg"
 
@@ -111,12 +111,6 @@ export const Projects = [
         name: "Asteriods", 
         imageSrc: img4, 
         github: "#",
-    },
-    {
-        id: 5, 
-        name: "Rhodes Inc Platform", 
-        imageSrc: img5, 
-        github: "#",
     }
 ];
 
@@ -133,7 +127,7 @@ export const RobloxProjects = [
     }
 ];
 
-export default SocialLinks = [
+export const SocialLinks = [
     {
         id: 1,
         iconsSrc: ( 
