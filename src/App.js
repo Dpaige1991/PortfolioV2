@@ -62,7 +62,7 @@ function App() {
             </a>
 
             <a 
-              href="https://www.youtube.com" 
+              href="https://drive.google.com/file/d/1xy5b42YTrlLmlMWLFkzGz1tdceRHiM0e/view?usp=sharing" 
               className="ml-auto text-base text-textBase font-medium hover:text-slate-100 cursor-pointer border border-textBase px-2 py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out"
             >
               Download
@@ -120,7 +120,7 @@ function App() {
 
             <motion.a
             whileTap={{ scale: 0.8 }} 
-              href="#" 
+              href="https://drive.google.com/file/d/1xy5b42YTrlLmlMWLFkzGz1tdceRHiM0e/view?usp=sharing" 
               className="text-base text-textBase font-medium 
               hover:text-slate-100 cursor-pointer border border-textBase px-2 
               py-1 rounded-xl hover:border-gray-100 duration-100 ease-in-out"
